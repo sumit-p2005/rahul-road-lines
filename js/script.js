@@ -11,7 +11,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 2. Trigger initial hero animations
+    // 2. Mobile Menu Toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (mobileMenuBtn && navLinks) {
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close menu when clicking a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    }
+
+    // 3. Trigger initial hero animations
     const fadeElements = document.querySelectorAll('.fade-in-up');
     
     // Slight delay for smooth initial load
