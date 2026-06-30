@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rahul Road Lines | Premium Transportation & Logistics</title>
-    <meta name="description" content="Safe logistics, cargo transportation, and moving solutions across India.">
+    <title>Rahul Road Lines | Trusted Transport & Logistics Services in Bhopal</title>
+    <meta name="description" content="Rahul Road Lines provides trusted transportation, freight, courier, parcel delivery, and logistics services across India. Based in Bhopal, Madhya Pradesh.">
+    <meta name="keywords" content="Rahul Road Lines, Transport Company Bhopal, Logistics Services, Courier Service, Freight Transport, Parcel Delivery, Truck Transport India">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,18 +18,36 @@
     <!-- Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/logo.png">
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
 
+    <!-- LOADING SCREEN -->
+    <div id="loader" class="loader-wrapper">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <img src="assets/logo.png" alt="Rahul Road Lines Logo" class="loader-logo-img">
+            </div>
+            <div class="loader-progress-bar">
+                <div class="loader-progress-line"></div>
+            </div>
+        </div>
+    </div>
+
     <!-- NAVBAR -->
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
             <a href="#" class="logo">
-                <span class="logo-icon"><i class="ph-fill ph-truck"></i></span>
-                <span class="logo-text">Rahul Road Lines</span>
+                <img src="assets/logo.png" alt="Rahul Road Lines Logo" class="nav-logo-img">
+                <div class="logo-brand-info">
+                    <span class="logo-brand-title">Rahul Road Lines</span>
+                    <span class="logo-brand-tagline">Trusted Transport, Reliable Delivery</span>
+                </div>
             </a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
@@ -38,7 +57,7 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="nav-cta">
-                <a href="#contact" class="btn btn-primary">Get Quote</a>
+                <a href="#contact" class="btn btn-primary">Book Transport</a>
             </div>
             <div class="mobile-menu-btn">
                 <i class="ph ph-list"></i>
@@ -48,17 +67,21 @@
 
     <!-- HERO SECTION -->
     <section id="home" class="hero">
-        <div class="hero-bg" style="background-image: url('assets/new_hero_truck.png');"></div>
+        <div class="hero-bg-wrapper">
+            <div class="hero-bg-zoom" style="background-image: url('assets/hero_truck_bg.jpg');"></div>
+        </div>
         <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <h1 class="hero-title fade-in-up">Trusted Transport.<br>Reliable Delivery.</h1>
-            <p class="hero-subtitle fade-in-up delay-1">Safe logistics, cargo transportation, and moving solutions
-                across India.</p>
-            <div class="hero-buttons fade-in-up delay-2">
-                <a href="#contact" class="btn btn-primary">Get Quote</a>
-                <a href="tel:8966055996" class="btn btn-outline"><i class="ph ph-phone"></i> Call Now</a>
-                <a href="https://wa.me/918966055996" target="_blank" class="btn btn-whatsapp"><i
-                        class="ph ph-whatsapp-logo"></i> WhatsApp</a>
+        <div class="container hero-content-container">
+            <div class="hero-content-left-aligned">
+                <span class="hero-label fade-in-up">Trusted Logistics Partner</span>
+                <h1 class="hero-title fade-in-up delay-1">Trusted <span class="text-red">Transport.</span><br>Reliable Delivery.</h1>
+                <p class="hero-subtitle fade-in-up delay-2">Providing safe, affordable, and on-time logistics services across India with professional transportation solutions for businesses and individuals.</p>
+                <div class="hero-buttons fade-in-up delay-3">
+                    <a href="#contact" class="btn btn-primary">Book Transport</a>
+                    <a href="#contact" class="btn btn-outline-white">Contact Us</a>
+                    <a href="https://wa.me/919301572121" target="_blank" class="btn btn-whatsapp"><i
+                            class="ph ph-whatsapp-logo"></i> WhatsApp</a>
+                </div>
             </div>
         </div>
 
@@ -76,8 +99,8 @@
                     </div>
                     <div class="stat-divider"></div>
                     <div class="stat-item">
-                        <h3 class="stat-number">PAN India</h3>
-                        <p class="stat-label">Service</p>
+                        <h3 class="stat-number">⭐ 4.6</h3>
+                        <p class="stat-label">5 Reviews</p>
                     </div>
                 </div>
             </div>
@@ -113,38 +136,44 @@
                 <!-- Service 1 -->
                 <div class="service-card">
                     <div class="service-icon"><i class="ph ph-truck"></i></div>
-                    <h3>Cargo Transportation</h3>
-                    <p>Heavy and light cargo transport across all major routes in India with GPS tracking.</p>
+                    <h3>Full Truck Load (FTL)</h3>
+                    <p>Secure and efficient transport for large cargo volumes requiring a dedicated truck.</p>
                 </div>
                 <!-- Service 2 -->
                 <div class="service-card">
                     <div class="service-icon"><i class="ph ph-package"></i></div>
-                    <h3>Logistics Solutions</h3>
-                    <p>End-to-end supply chain management for businesses of all sizes.</p>
+                    <h3>Part Load (LTL)</h3>
+                    <p>Cost-effective solution for smaller shipments sharing truck space.</p>
                 </div>
                 <!-- Service 3 -->
                 <div class="service-card">
-                    <div class="service-icon"><i class="ph ph-house-line"></i></div>
-                    <h3>Packers & Movers</h3>
-                    <p>Professional home and office relocation services with safe handling guarantees.</p>
+                    <div class="service-icon"><i class="ph ph-envelope"></i></div>
+                    <h3>Parcel Delivery</h3>
+                    <p>Quick and reliable delivery for boxes, documents, and small parcels.</p>
                 </div>
                 <!-- Service 4 -->
                 <div class="service-card">
-                    <div class="service-icon"><i class="ph ph-factory"></i></div>
-                    <h3>Industrial Transport</h3>
-                    <p>Specialized transport for heavy machinery and industrial equipment.</p>
+                    <div class="service-icon"><i class="ph ph-globe"></i></div>
+                    <h3>Freight & Logistics</h3>
+                    <p>Comprehensive heavy freight transport and supply chain management across India.</p>
                 </div>
                 <!-- Service 5 -->
                 <div class="service-card">
-                    <div class="service-icon"><i class="ph ph-warehouse"></i></div>
-                    <h3>Warehouse Services</h3>
-                    <p>Secure, modern warehousing solutions with inventory management.</p>
+                    <div class="service-icon"><i class="ph ph-wrench"></i></div>
+                    <h3>Custom Transport Services</h3>
+                    <p>Tailored logistics solutions for unique or sensitive transport requirements.</p>
                 </div>
                 <!-- Service 6 -->
                 <div class="service-card">
-                    <div class="service-icon"><i class="ph ph-rocket"></i></div>
-                    <h3>Express Delivery</h3>
-                    <p>Time-critical transportation for urgent shipments across the country.</p>
+                    <div class="service-icon"><i class="ph ph-file-text"></i></div>
+                    <h3>Legal Courier Services</h3>
+                    <p>Secure and confidential delivery for official and legal documents.</p>
+                </div>
+                <!-- Service 7 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="ph ph-car"></i></div>
+                    <h3>Vehicle Transportation</h3>
+                    <p>Professional moving solutions for cars, bikes, and other vehicles.</p>
                 </div>
             </div>
         </div>
@@ -162,9 +191,7 @@
             </div>
             <div class="about-content">
                 <h2 class="section-title">Moving India Forward</h2>
-                <p class="about-text">Rahul Road Lines provides reliable transportation and logistics services with safe
-                    cargo handling, professional operations, and timely delivery across India. We believe in building
-                    lasting partnerships with our clients by delivering excellence every mile of the journey.</p>
+                <p class="about-text">Rahul Road Lines is a trusted transportation and logistics company based in Bhopal, Madhya Pradesh. We provide reliable freight, parcel, courier, and vehicle transportation services with a strong commitment to timely delivery, customer satisfaction, and secure logistics. Our experienced team ensures every shipment reaches its destination safely and efficiently.</p>
 
                 <div class="counter-grid">
                     <div class="counter-box">
@@ -194,23 +221,39 @@
     <section class="showcase parallax" style="background-image: url('assets/new_showcase_truck.png');">
         <div class="showcase-overlay"></div>
         <div class="container showcase-content">
-            <h2 class="showcase-title">Built for Reliable Transportation</h2>
+            <h2 class="showcase-title">Why Choose Us</h2>
             <div class="features-row">
                 <div class="feature-item">
-                    <i class="ph-fill ph-check-circle"></i>
-                    <span>GPS Tracking</span>
+                    <i class="ph ph-check-circle"></i>
+                    <span>Trusted Transport Partner</span>
                 </div>
                 <div class="feature-item">
-                    <i class="ph-fill ph-shield-check"></i>
-                    <span>Safe Delivery</span>
+                    <i class="ph ph-check-circle"></i>
+                    <span>Fast Delivery</span>
                 </div>
                 <div class="feature-item">
-                    <i class="ph-fill ph-users-three"></i>
-                    <span>Professional Team</span>
+                    <i class="ph ph-check-circle"></i>
+                    <span>Safe & Secure Goods Handling</span>
                 </div>
                 <div class="feature-item">
-                    <i class="ph-fill ph-clock"></i>
-                    <span>24/7 Support</span>
+                    <i class="ph ph-check-circle"></i>
+                    <span>Affordable Pricing</span>
+                </div>
+                <div class="feature-item">
+                    <i class="ph ph-check-circle"></i>
+                    <span>Experienced Logistics Team</span>
+                </div>
+                <div class="feature-item">
+                    <i class="ph ph-check-circle"></i>
+                    <span>Professional Customer Support</span>
+                </div>
+                <div class="feature-item">
+                    <i class="ph ph-check-circle"></i>
+                    <span>Reliable Service Across India</span>
+                </div>
+                <div class="feature-item">
+                    <i class="ph ph-check-circle"></i>
+                    <span>Customer Satisfaction</span>
                 </div>
             </div>
         </div>
@@ -237,49 +280,43 @@
         <div class="container">
             <div class="section-header text-center">
                 <h2 class="section-title">What Our Clients Say</h2>
-                <p class="section-subtitle">Trusted by businesses and individuals across the country.</p>
+                <p class="section-subtitle">⭐ 4.6 / 5 • Based on 5 Reviews</p>
             </div>
 
             <div class="testimonials-grid">
                 <!-- Testimonial 1 -->
                 <div class="testimonial-card">
-                    <div class="quote-icon"><i class="ph-fill ph-quotes"></i></div>
-                    <p class="testimonial-text">"Rahul Road Lines has completely transformed our supply chain. Their
-                        trucks are always on time, and the cargo is handled with utmost care. Highly recommended for any
-                        business owner."</p>
+                    <div class="quote-icon"><i class="ph ph-quotes"></i></div>
+                    <p class="testimonial-text">"The service of Rahul Road Lines is excellent. The office staff was very polite and explained everything clearly. Their support is outstanding. Highly recommended."</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar"><i class="ph-fill ph-user-circle"></i></div>
+                        <div class="author-avatar"><i class="ph ph-user-circle"></i></div>
                         <div class="author-info">
-                            <h4>Rajesh Kumar</h4>
-                            <span>Business Owner</span>
+                            <h4>Ritik Patel</h4>
+                            <span>⭐⭐⭐⭐⭐</span>
                         </div>
                     </div>
                 </div>
                 <!-- Testimonial 2 -->
                 <div class="testimonial-card">
-                    <div class="quote-icon"><i class="ph-fill ph-quotes"></i></div>
-                    <p class="testimonial-text">"We used their packers and movers service for relocating our office from
-                        Mumbai to Bangalore. The entire process was smooth, professional, and stress-free. Great team!"
-                    </p>
+                    <div class="quote-icon"><i class="ph ph-quotes"></i></div>
+                    <p class="testimonial-text">"Fast service with a great response. Very professional logistics company."</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar"><i class="ph-fill ph-user-circle"></i></div>
+                        <div class="author-avatar"><i class="ph ph-user-circle"></i></div>
                         <div class="author-info">
-                            <h4>Amit Sharma</h4>
-                            <span>Corporate Client</span>
+                            <h4>Akash Enterprises</h4>
+                            <span>⭐⭐⭐⭐⭐</span>
                         </div>
                     </div>
                 </div>
                 <!-- Testimonial 3 -->
                 <div class="testimonial-card">
-                    <div class="quote-icon"><i class="ph-fill ph-quotes"></i></div>
-                    <p class="testimonial-text">"Exceptional industrial transport service. We needed heavy machinery
-                        moved across states and they handled it perfectly with proper safety protocols and tracking."
-                    </p>
+                    <div class="quote-icon"><i class="ph ph-quotes"></i></div>
+                    <p class="testimonial-text">"Great service. Reliable transportation and timely delivery."</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar"><i class="ph-fill ph-user-circle"></i></div>
+                        <div class="author-avatar"><i class="ph ph-user-circle"></i></div>
                         <div class="author-info">
-                            <h4>Vikram Singh</h4>
-                            <span>Manufacturing Head</span>
+                            <h4>Narayan Verma</h4>
+                            <span>⭐⭐⭐⭐⭐</span>
                         </div>
                     </div>
                 </div>
@@ -321,33 +358,34 @@
 
                     <div class="contact-details">
                         <div class="contact-item">
-                            <div class="contact-icon"><i class="ph-fill ph-phone-call"></i></div>
+                            <div class="contact-icon"><i class="ph ph-phone"></i></div>
                             <div>
                                 <h4>Call Us 24/7</h4>
-                                <a href="tel:8966055996" class="contact-link text-large">8966055996</a>
+                                <a href="tel:9301572121" class="contact-link text-large">93015 72121</a>
                             </div>
                         </div>
                         <div class="contact-item">
-                            <div class="contact-icon"><i class="ph-fill ph-envelope"></i></div>
+                            <div class="contact-icon"><i class="ph ph-clock"></i></div>
                             <div>
-                                <h4>Email Us</h4>
-                                <a href="mailto:rahul.roadlines@yahoo.in"
-                                    class="contact-link">rahul.roadlines@yahoo.in</a>
+                                <h4>Business Hours</h4>
+                                <p class="contact-text">Open Daily • Closes 10:00 PM</p>
                             </div>
                         </div>
                         <div class="contact-item">
-                            <div class="contact-icon"><i class="ph-fill ph-map-pin"></i></div>
+                            <div class="contact-icon"><i class="ph ph-map-pin"></i></div>
                             <div>
                                 <h4>Head Office</h4>
-                                <p class="contact-text">New Kabadkhana, Bhopal Madhya Pradesh</p>
+                                <p class="contact-text">Mahakal Road, Categorised Market, JP Nagar, Bhopal, Madhya Pradesh 462001</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="contact-actions mt-4">
-                        <a href="tel:8966055996" class="btn btn-primary"><i class="ph ph-phone"></i> Call Now</a>
-                        <a href="https://wa.me/918966055996" target="_blank" class="btn btn-whatsapp"><i
+                        <a href="tel:9301572121" class="btn btn-primary"><i class="ph ph-phone"></i> Call Now</a>
+                        <a href="https://wa.me/919301572121" target="_blank" class="btn btn-whatsapp"><i
                                 class="ph ph-whatsapp-logo"></i> WhatsApp</a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=Mahakal+Road+Categorised+Market+JP+Nagar+Bhopal+Madhya+Pradesh+462001" target="_blank" class="btn btn-outline"><i
+                                class="ph ph-map-pin"></i> Get Directions</a>
                     </div>
                 </div>
 
@@ -369,11 +407,13 @@
                         <div class="form-group">
                             <select name="service" class="form-control" required>
                                 <option value="" disabled selected>Select Service</option>
-                                <option value="cargo">Cargo Transportation</option>
-                                <option value="logistics">Logistics Solutions</option>
-                                <option value="packers">Packers & Movers</option>
-                                <option value="industrial">Industrial Transport</option>
-                                <option value="warehouse">Warehouse Services</option>
+                                <option value="ftl">Full Truck Load (FTL)</option>
+                                <option value="ltl">Part Load (LTL)</option>
+                                <option value="parcel">Parcel Delivery</option>
+                                <option value="freight">Freight & Logistics</option>
+                                <option value="custom">Custom Transport Services</option>
+                                <option value="legal">Legal Courier Services</option>
+                                <option value="vehicle">Vehicle Transportation</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -382,6 +422,15 @@
                         </div>
                         <button type="submit" class="btn btn-primary btn-block">Submit Request</button>
                     </form>
+                </div>
+            </div>
+
+            <!-- Google Maps Embed Row -->
+            <div class="map-container" style="margin-top: 40px; border-radius: 16px; overflow: hidden; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3665.6265047814876!2d77.40871141151659!3d23.256651278912234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c4273552084df%3A0xe54e60803ee7111b!2sMahakal%20Rd%2C%20Bhopal%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1719752000000!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="map-actions" style="display: flex; justify-content: center; gap: 15px; margin-top: 20px; margin-bottom: 20px; padding: 0 20px;">
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=Mahakal+Road+Categorised+Market+JP+Nagar+Bhopal+Madhya+Pradesh+462001" target="_blank" class="btn btn-primary"><i class="ph ph-navigation-arrow"></i> Get Directions</a>
+                    <a href="https://maps.app.goo.gl/P8Z8K6L2jUexZ7bN9" target="_blank" class="btn btn-outline"><i class="ph ph-map-trifold"></i> Open in Google Maps</a>
                 </div>
             </div>
         </div>
@@ -393,16 +442,15 @@
             <div class="footer-grid">
                 <div class="footer-col brand-col">
                     <a href="#" class="logo footer-logo">
-                        <span class="logo-icon"><i class="ph-fill ph-truck"></i></span>
-                        <span class="logo-text">Rahul Road Lines</span>
+                        <img src="assets/logo.png" alt="Rahul Road Lines Logo" class="footer-logo-img">
                     </a>
-                    <p class="footer-text">Premium transportation and logistics company providing safe, reliable, and
-                        timely cargo movement across India.</p>
+                    <p class="footer-text">Trusted Transport, Reliable Delivery. Courier & Logistics Services based in Bhopal, MP.</p>
+                    <p class="footer-text" style="font-weight: 600; color: var(--primary-red);"><i class="ph-fill ph-star"></i> Rated 4.6/5 based on 5 reviews</p>
                     <div class="social-links">
-                        <a href="#"><i class="ph-fill ph-facebook-logo"></i></a>
-                        <a href="#"><i class="ph-fill ph-instagram-logo"></i></a>
-                        <a href="#"><i class="ph-fill ph-twitter-logo"></i></a>
-                        <a href="#"><i class="ph-fill ph-linkedin-logo"></i></a>
+                        <a href="#"><i class="ph ph-facebook-logo"></i></a>
+                        <a href="#"><i class="ph ph-instagram-logo"></i></a>
+                        <a href="#"><i class="ph ph-twitter-logo"></i></a>
+                        <a href="#"><i class="ph ph-linkedin-logo"></i></a>
                     </div>
                 </div>
 
@@ -418,13 +466,11 @@
                 </div>
 
                 <div class="footer-col">
-                    <h4>Services</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">Cargo Transport</a></li>
-                        <li><a href="#">Packers & Movers</a></li>
-                        <li><a href="#">Industrial Transport</a></li>
-                        <li><a href="#">Logistics Solutions</a></li>
-                        <li><a href="#">Warehouse</a></li>
+                    <h4>Our Office</h4>
+                    <ul class="footer-links" style="color: #CCCCCC;">
+                        <li style="margin-bottom: 10px;"><i class="ph ph-map-pin" style="color: var(--primary-red); margin-right: 8px;"></i> Mahakal Road, JP Nagar, Bhopal, MP 462001</li>
+                        <li style="margin-bottom: 10px;"><i class="ph ph-phone" style="color: var(--primary-red); margin-right: 8px;"></i> <a href="tel:9301572121" style="color: #CCCCCC;">93015 72121</a></li>
+                        <li style="margin-bottom: 10px;"><i class="ph ph-clock" style="color: var(--primary-red); margin-right: 8px;"></i> Open Daily: Closes 10 PM</li>
                     </ul>
                 </div>
 
