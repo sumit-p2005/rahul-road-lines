@@ -414,10 +414,11 @@ img {
    ========================================= */
 .hero {
     position: relative;
-    height: 880px; /* Desktop: 850–900px */
+    height: 100vh; /* Dynamic vertical height matching viewport */
+    min-height: 650px;
     display: flex;
     align-items: center;
-    padding-top: 100px;
+    padding-top: 80px;
     background-color: #0b0c10;
 }
 
@@ -479,13 +480,13 @@ img {
     letter-spacing: 2px;
     color: #D62828;
     font-weight: 600;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
 }
 
 .hero-title {
-    font-size: 80px;
+    font-size: 64px;
     font-weight: 800;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     color: #FFFFFF;
     line-height: 1.05;
     letter-spacing: -1.5px;
@@ -496,8 +497,8 @@ img {
 }
 
 .hero-subtitle {
-    font-size: 19px;
-    margin-bottom: 40px;
+    font-size: 17px;
+    margin-bottom: 24px;
     color: rgba(255, 255, 255, 0.9);
     max-width: 600px;
     line-height: 1.6;
