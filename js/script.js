@@ -152,14 +152,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     transitionTo(nextIdx, idx);
                 });
 
-                // Specific cut logic for Video 3 (idx === 2) - cut last 2 seconds
+                // Specific cut logic for Video 3 (idx === 2) - cut last 3 seconds
                 if (idx === 2) {
                     let cutTriggered = false;
                     video.addEventListener('play', () => {
                         cutTriggered = false;
                     });
                     video.addEventListener('timeupdate', () => {
-                        if (!cutTriggered && video.duration && video.currentTime >= video.duration - 2) {
+                        if (!cutTriggered && video.duration && video.currentTime >= video.duration - 3) {
                             cutTriggered = true;
                             transitionTo(nextIdx, idx);
                         }
