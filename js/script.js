@@ -122,9 +122,21 @@ document.addEventListener('DOMContentLoaded', () => {
         ];
         
         if (videos[0] && videos[1] && videos[2]) {
-            // Preload 2nd and 3rd videos in the background
-            videos[1].load();
-            videos[2].load();
+            // Progressive background loading to prevent network choking on page load
+            videos[0].addEventListener('playing', () => {
+                videos[1].preload = "auto";
+                videos[1].load();
+            }, { once: true });
+
+            videos[1].addEventListener('playing', () => {
+                videos[2].preload = "auto";
+                videos[2].load();
+            }, { once: true });
+
+            videos[2].addEventListener('playing', () => {
+                videos[0].preload = "auto";
+                videos[0].load();
+            }, { once: true });
 
             const transitionTo = (nextIdx, currentIdx) => {
                 const video = videos[currentIdx];
