@@ -111,6 +111,69 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // 6. Cinematic Hero Video Background Sequencer (No Scroll Parallax)
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    
+    if (!prefersReducedMotion) {
+        const videos = [
+            document.getElementById('hero-video-1'),
+            document.getElementById('hero-video-2'),
+            document.getElementById('hero-video-3')
+        ];
+        
+        if (videos[0] && videos[1] && videos[2]) {
+            // Preload 2nd and 3rd videos in the background
+            videos[1].load();
+            videos[2].load();
+
+            const transitionTo = (nextIdx, currentIdx) => {
+                const video = videos[currentIdx];
+                const nextVideo = videos[nextIdx];
+                
+                // Prevent duplicate trigger transitions
+                if (nextVideo.classList.contains('active')) return;
+                
+                nextVideo.currentTime = 0;
+                nextVideo.play().then(() => {
+                    nextVideo.classList.add('active');
+                    video.classList.remove('active');
+                }).catch(err => {
+                    console.warn('Failed to play next video in loop sequence:', err);
+                    nextVideo.classList.add('active');
+                    video.classList.remove('active');
+                });
+            };
+
+            // Set up ended event listeners for sequential loop
+            videos.forEach((video, idx) => {
+                const nextIdx = (idx + 1) % videos.length;
+                
+                video.addEventListener('ended', () => {
+                    transitionTo(nextIdx, idx);
+                });
+
+                // Specific cut logic for Video 3 (idx === 2) - cut last 2 seconds
+                if (idx === 2) {
+                    let cutTriggered = false;
+                    video.addEventListener('play', () => {
+                        cutTriggered = false;
+                    });
+                    video.addEventListener('timeupdate', () => {
+                        if (!cutTriggered && video.duration && video.currentTime >= video.duration - 2) {
+                            cutTriggered = true;
+                            transitionTo(nextIdx, idx);
+                        }
+                    });
+                }
+            });
+
+            // Ensure first video starts playing immediately
+            videos[0].play().catch(err => {
+                console.log('First video autoplay was blocked or failed:', err);
+            });
+        }
+    }
+
 });
 
 // 6. Loading Screen Fade-out
