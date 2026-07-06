@@ -214,6 +214,37 @@ img {
 
 .mt-4 { margin-top: 2rem; }
 
+/* Accessibility Utility Classes */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 20px;
+    background-color: var(--primary-red);
+    color: var(--bg-white);
+    padding: 12px 24px;
+    border-radius: 8px;
+    z-index: 10000;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+    top: 20px;
+}
+
 /* =========================================
    BUTTONS
    ========================================= */
@@ -407,6 +438,10 @@ img {
     color: white;
     font-size: 1.5rem;
     cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 10px;
 }
 
 /* =========================================
@@ -605,6 +640,8 @@ img {
 }
 
 .stat-number {
+    display: block;
+    font-family: var(--font-heading);
     font-size: 2.5rem;
     font-weight: 800;
     color: var(--primary-red);
@@ -1008,7 +1045,7 @@ img {
     color: var(--primary-red);
 }
 
-.author-info h4 {
+.author-info h3 {
     margin: 0;
     font-size: 1rem;
     color: var(--primary-black);
@@ -1097,7 +1134,7 @@ img {
     flex-shrink: 0;
 }
 
-.contact-item h4 {
+.contact-item h3 {
     color: var(--primary-black);
     font-size: 0.9rem;
     margin-bottom: 5px;
@@ -1213,7 +1250,7 @@ textarea.form-control {
     transform: translateY(-3px);
 }
 
-.footer-col h4 {
+.footer-col h3 {
     color: var(--bg-white);
     font-size: 1.2rem;
     margin-bottom: 25px;
@@ -1221,7 +1258,7 @@ textarea.form-control {
     padding-bottom: 10px;
 }
 
-.footer-col h4::after {
+.footer-col h3::after {
     content: '';
     position: absolute;
     left: 0;
