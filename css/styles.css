@@ -1457,3 +1457,240 @@ textarea.form-control {
     
     .features-row { flex-direction: column; gap: 30px; }
 }
+
+/* =========================================
+   DAILY PARCEL BOOKING SECTION
+   ========================================= */
+.parcel-booking {
+    background-color: var(--bg-white);
+}
+
+.parcel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.parcel-card {
+    background: var(--alternate-bg);
+    border: 1px solid var(--border-color);
+    padding: 35px 30px;
+    border-radius: 16px;
+    transition: var(--transition-smooth);
+    box-shadow: var(--shadow-sm);
+}
+
+.parcel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+    border-top: 4px solid var(--primary-red);
+}
+
+.parcel-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+    color: var(--primary-red);
+}
+
+.parcel-card-header i {
+    font-size: 1.5rem;
+}
+
+.parcel-card-header h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--primary-black);
+}
+
+.parcel-locations {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 15px;
+    list-style: none;
+    padding: 0;
+}
+
+.parcel-locations li {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--secondary-text);
+    position: relative;
+    padding-left: 15px;
+}
+
+.parcel-locations li::before {
+    content: '•';
+    color: var(--primary-red);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.parcel-footer-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-black);
+    color: var(--bg-white);
+    border-radius: 16px;
+    padding: 30px 40px;
+    box-shadow: var(--shadow-md);
+    border-left: 6px solid var(--primary-red);
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.parcel-footer-banner .banner-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.parcel-footer-banner .banner-content i {
+    font-size: 2.5rem;
+    color: var(--primary-red);
+}
+
+.parcel-footer-banner .banner-content h4 {
+    margin: 0 0 5px;
+    font-size: 1.25rem;
+    color: var(--bg-white);
+    font-weight: 700;
+}
+
+.parcel-footer-banner .banner-content p {
+    margin: 0;
+    color: #CCCCCC;
+    font-size: 0.95rem;
+}
+
+/* =========================================
+   OTHER BRANCHES SECTION
+   ========================================= */
+.branches-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+}
+
+.branch-card {
+    background: var(--bg-white);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-smooth);
+}
+
+.branch-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+    border-top: 4px solid var(--primary-red);
+}
+
+.branch-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 20px;
+}
+
+.branch-header i {
+    font-size: 2.2rem;
+    color: var(--primary-red);
+    background-color: rgba(214, 40, 40, 0.05);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.branch-header h3 {
+    margin: 0 0 5px;
+    font-size: 1.35rem;
+    color: var(--primary-black);
+    font-weight: 700;
+}
+
+.branch-tag {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--secondary-text);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.branch-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.branch-detail-item {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.branch-detail-item i {
+    font-size: 1.2rem;
+    color: var(--primary-red);
+    margin-top: 4px;
+    flex-shrink: 0;
+}
+
+.branch-detail-item p {
+    margin: 0;
+    color: var(--secondary-text);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.branch-link {
+    color: var(--primary-black);
+    font-weight: 600;
+    transition: var(--transition-fast);
+}
+
+.branch-link:hover {
+    color: var(--primary-red);
+}
+
+/* Media Queries for new sections */
+@media (max-width: 768px) {
+    .parcel-locations {
+        grid-template-columns: 1fr;
+    }
+    
+    .parcel-footer-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+    
+    .parcel-footer-banner .banner-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .parcel-footer-banner .btn {
+        width: 100%;
+    }
+    
+    .branches-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .branch-card {
+        padding: 25px;
+    }
+}
