@@ -186,6 +186,34 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // 7. Request a Quote via WhatsApp
+    const quoteForm = document.querySelector('.contact-form');
+    const submitWhatsappBtn = document.getElementById('btn-submit-whatsapp');
+    
+    if (quoteForm && submitWhatsappBtn) {
+        submitWhatsappBtn.addEventListener('click', () => {
+            if (quoteForm.reportValidity()) {
+                const name = document.getElementById('form-name').value;
+                const email = document.getElementById('form-email').value;
+                const phone = document.getElementById('form-phone').value;
+                const serviceSelect = document.getElementById('form-service');
+                const serviceText = serviceSelect.options[serviceSelect.selectedIndex].text;
+                const message = document.getElementById('form-message').value;
+                
+                const formattedMessage = `*Rahul Road Lines - Quote Request*\n` +
+                                         `------------------------------------\n` +
+                                         `*Name:* ${name}\n` +
+                                         `*Phone:* ${phone}\n` +
+                                         `*Email:* ${email}\n` +
+                                         `*Service:* ${serviceText}\n` +
+                                         `*Message:* ${message}`;
+                
+                const whatsappUrl = `https://api.whatsapp.com/send?phone=918966055996&text=${encodeURIComponent(formattedMessage)}`;
+                window.open(whatsappUrl, '_blank');
+            }
+        });
+    }
+
 });
 
 // 6. Loading Screen Fade-out

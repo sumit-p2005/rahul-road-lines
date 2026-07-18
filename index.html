@@ -609,7 +609,10 @@
                             <textarea id="form-message" name="message" class="form-control" rows="4"
                                 placeholder="Your Message or Requirements" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-block">Submit Request</button>
+                        <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 15px;">
+                            <button type="button" id="btn-submit-whatsapp" class="btn btn-whatsapp btn-block"><i class="ph ph-whatsapp-logo"></i> Send Quote via WhatsApp</button>
+                            <button type="submit" class="btn btn-primary btn-block"><i class="ph ph-envelope"></i> Send Quote via Email</button>
+                        </div>
                     </form>
                 </div>
             </div>
