@@ -574,10 +574,7 @@
                 </div>
 
                 <div class="contact-form-wrapper">
-                    <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
-                        <!-- Replace with your actual Web3Forms Access Key -->
-                        <input type="hidden" name="access_key" value="616f36b7-4379-4a96-8c2a-4398f65e95aa">
-
+                    <form class="contact-form">
                         <h3>Request a Quote</h3>
                         <div class="form-group">
                             <label for="form-name" class="sr-only">Your Name</label>
@@ -609,10 +606,9 @@
                             <textarea id="form-message" name="message" class="form-control" rows="4"
                                 placeholder="Your Message or Requirements" required></textarea>
                         </div>
-                        <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 15px;">
-                            <button type="button" id="btn-submit-whatsapp" class="btn btn-whatsapp btn-block"><i class="ph ph-whatsapp-logo"></i> Send Quote via WhatsApp</button>
-                            <button type="submit" class="btn btn-primary btn-block"><i class="ph ph-envelope"></i> Send Quote via Email</button>
-                        </div>
+                        <button type="submit" class="btn btn-whatsapp btn-block" style="margin-top: 15px;">
+                            <i class="ph ph-whatsapp-logo"></i> Send Quote via WhatsApp
+                        </button>
                     </form>
                 </div>
             </div>
